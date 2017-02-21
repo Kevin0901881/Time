@@ -1,0 +1,132 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.timeapp.time.Theme"
+    android:id="@+id/background_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/dark_rl">
+
+        <!--ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/theme_dark"
+            android:scaleType="centerCrop"
+            android:id="@+id/dark"/-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#373737"
+            android:id="@+id/background_dark"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/time_dark"
+            android:layout_centerInParent="true">
+
+            <TextClock
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:format12Hour="hh.mm"
+                android:textSize="70sp"
+                android:id="@+id/min_hr_dark"/>
+
+            <TextClock
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:format12Hour="ss"
+                android:textSize="25sp"
+                android:layout_marginStart="8dp"
+                android:id="@+id/sec_dark"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            android:id="@+id/view_dark"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/theme_dark"
+            android:textColor="#FFFFFF"
+            android:id="@+id/dark_text"
+            android:layout_centerInParent="true"
+            android:textSize="40sp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/light_rl">
+
+        <!--ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/theme_light"
+            android:scaleType="centerCrop"
+            android:id="@+id/light"/-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E8E8E8"
+            android:id="@+id/background_light"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/time_light"
+            android:layout_centerInParent="true">
+
+            <TextClock
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#373737"
+                android:format12Hour="hh.mm"
+                android:textSize="70sp"
+                android:id="@+id/min_hr_light"/>
+
+            <TextClock
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#373737"
+                android:format12Hour="ss"
+                android:textSize="25sp"
+                android:layout_marginStart="8dp"
+                android:id="@+id/sec_light"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:id="@+id/view_light"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/theme_light"
+            android:textColor="#252525"
+            android:id="@+id/light_text"
+            android:layout_centerInParent="true"
+            android:textSize="40sp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,280 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.timeapp.time.Alarm"
+    android:id="@+id/background"
+    android:keepScreenOn="true">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alarm_alarm"
+        android:layout_alignParentEnd="true"
+        android:padding="17dp"
+        android:textSize="25sp"
+        android:textColor="#252525"
+        android:id="@+id/alarm_text"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alarm_alarm"
+        android:layout_alignParentEnd="true"
+        android:padding="17dp"
+        android:textSize="25sp"
+        android:textColor="#E91E63"
+        android:id="@+id/alarm_text_pink"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alarm_alarm"
+        android:padding="17dp"
+        android:textSize="25sp"
+        android:textColor="#252525"
+        android:id="@+id/alarm_text_align"
+        android:alpha="0"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/alarm_you_have_no_alarms"
+        android:textSize="15sp"
+        android:textColor="#FFFFFF"
+        android:alpha="0.6"
+        android:id="@+id/no_more_alarms"/>
+
+    <!--RelativeLayout
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/next_alarm"
+        android:layout_below="@+id/alarm_text_align"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Alarm Title"
+            android:id="@+id/alarm_title"
+            android:textSize="22sp"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10.00"
+            android:layout_below="@+id/alarm_title"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="75sp"
+            android:id="@+id/time"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ampm"
+            android:text="PM"
+            android:layout_toEndOf="@+id/time"
+            android:layout_below="@+id/alarm_title"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="16dp"
+            android:textSize="19sp"
+            android:textColor="#FFFFFF"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/time"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:id="@+id/date_options">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TODAY"
+                android:textSize="15sp"
+                android:textColor="#FFFFFF"
+                android:layout_marginEnd="25dp"
+                android:id="@+id/day"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VIBRATE"
+                android:textSize="15sp"
+                android:textColor="#E91E63"
+                android:layout_marginEnd="25dp"
+                android:id="@+id/vibrate"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="REPEAT"
+                android:textSize="15sp"
+                android:textColor="#E91E63"
+                android:id="@+id/repeat"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="211.33dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/next_alarm"
+        android:src="@drawable/line_clock"
+        android:adjustViewBounds="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:id="@+id/line"/-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/alarm_text_align"
+        android:id="@+id/other_alarms">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/alarms"
+            android:fadingEdge="vertical"
+            android:fadeScrollbars="true"
+            android:scrollbarFadeDuration="1000">
+
+        </ListView>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/alarm_circle_pink"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25dp"
+        android:id="@+id/alarm_circle"/>
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/add_alarm"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25dp"
+        android:id="@+id/add_alarm"/>
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/add_alarm_pressed"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25dp"
+        android:id="@+id/add_alarm_pressed"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:alpha="0.7"
+        android:id="@+id/dark_view"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clock_alarm_white"
+            android:textSize="40sp"
+            android:textColor="#E91E63"
+            android:id="@+id/alarm_nav"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:paddingEnd="17dp"
+            android:paddingTop="13dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clock_clock"
+            android:textSize="40sp"
+            android:textColor="#4d4d4d"
+            android:id="@+id/clock_nav"
+            android:layout_below="@+id/alarm_nav"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:paddingEnd="17dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clock_clock"
+            android:textSize="40sp"
+            android:textColor="#FF9800"
+            android:id="@+id/clock_nav_orange"
+            android:layout_below="@+id/alarm_nav"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:paddingEnd="17dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clock_settings_white"
+            android:textSize="40sp"
+            android:textColor="#4d4d4d"
+            android:id="@+id/settings_nav"
+            android:layout_below="@+id/clock_nav"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentEnd="true"
+            android:paddingEnd="17dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clock_settings_orange"
+            android:textSize="40sp"
+            android:textColor="#4CAF50"
+            android:id="@+id/settings_nav_orange"
+            android:layout_below="@+id/clock_nav"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentEnd="true"
+            android:paddingEnd="17dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clock_theme"
+            android:textSize="40sp"
+            android:textColor="#4d4d4d"
+            android:id="@+id/theme_nav"
+            android:layout_below="@+id/settings_nav"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentEnd="true"
+            android:paddingEnd="17dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clock_theme_orange"
+            android:textSize="40sp"
+            android:textColor="#9C27B0"
+            android:id="@+id/theme_nav_orange"
+            android:layout_below="@+id/settings_nav"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentEnd="true"
+            android:paddingEnd="17dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

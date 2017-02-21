@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.timeapp.time.About"
+    android:id="@+id/background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/about_about"
+        android:layout_alignParentEnd="true"
+        android:padding="17dp"
+        android:textSize="25sp"
+        android:textColor="#252525"
+        android:id="@+id/about_text"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/time_logo"
+        android:id="@+id/logo"
+        android:layout_marginEnd="90dp"
+        android:layout_marginStart="90dp"
+        android:adjustViewBounds="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/about_text"
+        android:layout_marginTop="10dp"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:id="@+id/title">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TIME"
+            android:textColor="#FFFFFF"
+            android:layout_centerHorizontal="true"
+            android:textSize="40sp"
+            android:id="@+id/time"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/time"
+            android:text="Clock and Alarm"
+            android:layout_centerHorizontal="true"
+            android:textSize="17sp"
+            android:id="@+id/description"
+            android:layout_marginTop="15dp"
+            android:textColor="#FFFFFF"
+            android:alpha="0.7"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:id="@+id/version_copyright">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Version 1.0"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:id="@+id/version"
+            android:alpha="0.7"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&#169; Kevin Li, 2015"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:id="@+id/copyright"
+            android:alpha="0.7"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

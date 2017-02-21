@@ -1,0 +1,577 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.timeapp.time.AddAlarm"
+    android:id="@+id/background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alarm_alarm"
+        android:layout_alignParentEnd="true"
+        android:paddingEnd="17dp"
+        android:paddingTop="17dp"
+        android:textSize="25sp"
+        android:textColor="#252525"
+        android:id="@+id/alarm_text"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alarm_alarm"
+        android:layout_alignParentEnd="true"
+        android:paddingEnd="17dp"
+        android:paddingTop="17dp"
+        android:textSize="25sp"
+        android:textColor="#E91E63"
+        android:id="@+id/alarm_text_pink"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alarm_alarm"
+        android:paddingEnd="17dp"
+        android:paddingTop="17dp"
+        android:textSize="25sp"
+        android:textColor="#252525"
+        android:id="@+id/alarm_text_align"
+        android:alpha="0"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttons"
+        android:layout_below="@+id/alarm_text_align"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:id="@+id/center_align">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title">
+
+            <EditText
+                android:layout_width="270.33dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/alarm_title"
+                android:layout_alignStart="@+id/line"
+                android:hint="@string/add_alarm_hint"
+                android:textSize="30sp"
+                android:textColor="#FFFFFF"
+                android:singleLine="true"
+                android:layout_marginBottom="10dp"
+                android:textColorHint="#FFFFFF"
+                android:background="@android:color/transparent"/>
+
+            <!--TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_alarm_text"
+                android:textSize="30sp"
+                android:textColor="#FFFFFF"
+                android:id="@+id/add_alarm_text"
+                android:layout_alignStart="@+id/line"
+                android:layout_marginBottom="10dp"/-->
+
+            <ImageView
+                android:layout_width="270.33dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/add_alarm_line"
+                android:adjustViewBounds="true"
+                android:id="@+id/line"
+                android:layout_below="@+id/alarm_title"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12.00"
+            android:layout_below="@+id/title"
+            android:layout_centerHorizontal="true"
+            android:textSize="70sp"
+            android:id="@+id/time"
+            android:layout_marginTop="40dp"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 hr 30 min from now"
+            android:layout_below="@+id/time"
+            android:layout_centerHorizontal="true"
+            android:textSize="16sp"
+            android:id="@+id/time_from_now"
+            android:layout_marginBottom="40dp"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ampm"
+            android:text="AM"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:layout_toEndOf="@+id/time"
+            android:layout_alignTop="@+id/time"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="3dp"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/time_from_now"
+            android:id="@+id/options">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VIBRATE"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:id="@+id/no_vibrate"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VIBRATE"
+                android:textColor="#E91E63"
+                android:textSize="18sp"
+                android:id="@+id/vibrate"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="REPEAT"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:id="@+id/no_repeat"
+                android:layout_marginStart="110dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="REPEAT"
+                android:textColor="#E91E63"
+                android:textSize="18sp"
+                android:id="@+id/repeat"
+                android:layout_marginStart="110dp"
+                />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="270.33dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/repeat_rectangle"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/options"
+            android:layout_marginTop="20dp"
+            android:id="@+id/repeat_box"/>
+
+        <ImageView
+            android:layout_width="270.33dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/repeat_rectangle_pink"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/options"
+            android:layout_marginTop="20dp"
+            android:id="@+id/repeat_box_pink"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/options"
+            android:layout_marginTop="30dp"
+            android:id="@+id/days">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="S"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:id="@+id/sunday"
+                android:paddingStart="11dp"
+                android:paddingEnd="11dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="S"
+                android:textColor="#E91E63"
+                android:textSize="22sp"
+                android:id="@+id/sunday_pink"
+                android:paddingStart="11dp"
+                android:paddingEnd="11dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="M"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:id="@+id/monday"
+                android:layout_toEndOf="@+id/sunday"
+                android:paddingStart="11dp"
+                android:paddingEnd="11dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="M"
+                android:textColor="#E91E63"
+                android:textSize="22sp"
+                android:id="@+id/monday_pink"
+                android:layout_toEndOf="@+id/sunday"
+                android:paddingStart="11dp"
+                android:paddingEnd="11dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="T"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:id="@+id/tuesday"
+                android:layout_toEndOf="@+id/monday"
+                android:paddingStart="11dp"
+                android:paddingEnd="11dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="T"
+                android:textColor="#E91E63"
+                android:textSize="22sp"
+                android:id="@+id/tuesday_pink"
+                android:layout_toEndOf="@+id/monday"
+                android:paddingStart="11dp"
+                android:paddingEnd="11dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="W"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:id="@+id/wednesday"
+                android:layout_toEndOf="@+id/tuesday"
+                android:paddingStart="11dp"
+                android:paddingEnd="11dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="W"
+                android:textColor="#E91E63"
+                android:textSize="22sp"
+                android:id="@+id/wednesday_pink"
+                android:layout_toEndOf="@+id/tuesday"
+                android:paddingStart="11dp"
+                android:paddingEnd="11dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="T"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:id="@+id/thursday"
+                android:layout_toEndOf="@+id/wednesday"
+                android:paddingStart="11dp"
+                android:paddingEnd="11dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="T"
+                android:textColor="#E91E63"
+                android:textSize="22sp"
+                android:id="@+id/thursday_pink"
+                android:layout_toEndOf="@+id/wednesday"
+                android:paddingStart="11dp"
+                android:paddingEnd="11dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="F"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:id="@+id/friday"
+                android:layout_toEndOf="@+id/thursday"
+                android:paddingStart="11dp"
+                android:paddingEnd="11dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="F"
+                android:textColor="#E91E63"
+                android:textSize="22sp"
+                android:id="@+id/friday_pink"
+                android:layout_toEndOf="@+id/thursday"
+                android:paddingStart="11dp"
+                android:paddingEnd="11dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="S"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:layout_toEndOf="@+id/friday"
+                android:id="@+id/saturday"
+                android:paddingStart="11dp"
+                android:paddingEnd="11dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="S"
+                android:textColor="#E91E63"
+                android:textSize="22sp"
+                android:layout_toEndOf="@+id/friday"
+                android:id="@+id/saturday_pink"
+                android:paddingStart="11dp"
+                android:paddingEnd="11dp"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:id="@+id/buttons">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/delete"
+            android:layout_marginEnd="50dp"
+            android:id="@+id/delete"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/delete_dark"
+            android:layout_marginEnd="50dp"
+            android:id="@+id/delete_dark"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/save"
+            android:layout_toEndOf="@+id/delete"
+            android:id="@+id/save"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/save_dark"
+            android:layout_toEndOf="@+id/delete"
+            android:id="@+id/save_dark"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:alpha="0.7"
+        android:id="@+id/dark_view"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clock_alarm_white"
+            android:textSize="40sp"
+            android:textColor="#E91E63"
+            android:id="@+id/alarm_nav"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:paddingEnd="17dp"
+            android:paddingTop="13dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clock_clock"
+            android:textSize="40sp"
+            android:textColor="#4d4d4d"
+            android:id="@+id/clock_nav"
+            android:layout_below="@+id/alarm_nav"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:paddingEnd="17dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clock_clock"
+            android:textSize="40sp"
+            android:textColor="#FF9800"
+            android:id="@+id/clock_nav_orange"
+            android:layout_below="@+id/alarm_nav"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:paddingEnd="17dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clock_settings_white"
+            android:textSize="40sp"
+            android:textColor="#4d4d4d"
+            android:id="@+id/settings_nav"
+            android:layout_below="@+id/clock_nav"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentEnd="true"
+            android:paddingEnd="17dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clock_settings_orange"
+            android:textSize="40sp"
+            android:textColor="#4CAF50"
+            android:id="@+id/settings_nav_orange"
+            android:layout_below="@+id/clock_nav"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentEnd="true"
+            android:paddingEnd="17dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clock_theme"
+            android:textSize="40sp"
+            android:textColor="#4d4d4d"
+            android:id="@+id/theme_nav"
+            android:layout_below="@+id/settings_nav"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentEnd="true"
+            android:paddingEnd="17dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clock_theme_orange"
+            android:textSize="40sp"
+            android:textColor="#9C27B0"
+            android:id="@+id/theme_nav_orange"
+            android:layout_below="@+id/settings_nav"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentEnd="true"
+            android:paddingEnd="17dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/timepicker_layout">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignEnd="@+id/timePicker"
+            android:layout_alignStart="@+id/timePicker"
+            android:layout_alignTop="@+id/timePicker"
+            android:layout_alignBottom="@+id/ok_layout"
+            android:id="@+id/touch_hider"/>
+
+        <TimePicker
+            android:layout_width="270.33dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/timePicker"
+            android:background="#252525"
+            android:headerBackground="#E91E63"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_alignEnd="@+id/timePicker"
+            android:layout_alignStart="@+id/timePicker"
+            android:layout_below="@+id/timePicker"
+            android:id="@+id/timepicker_padding"
+            android:background="#252525"/>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/timePicker"
+            android:layout_alignStart="@+id/timePicker"
+            android:layout_below="@+id/timepicker_padding"
+            android:id="@+id/ok_layout">
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:background="#252525"
+                android:id="@+id/ok_button"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:background="#E91E63"
+                android:id="@+id/ok_button_pressed"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OK"
+                android:layout_centerInParent="true"
+                android:textSize="18sp"
+                android:textColor="#FFFFFF"
+                android:id="@+id/ok"/>
+
+        </RelativeLayout>
+
+        <!--ImageView
+            android:layout_width="270.33dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/add_alarm_ok_button"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/timePicker"
+            android:id="@+id/ok_button"/>
+
+        <ImageView
+            android:layout_width="270.33dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/add_alarm_ok_button_pressed"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/timePicker"
+            android:id="@+id/ok_button_pressed"/-->
+
+    </RelativeLayout>
+
+</RelativeLayout>

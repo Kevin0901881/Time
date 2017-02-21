@@ -1,0 +1,214 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Clock"
+    android:id="@+id/background_color">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/background" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/alignment_view"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/clock_clock"
+        android:layout_alignParentEnd="true"
+        android:padding="17dp"
+        android:textSize="25sp"
+        android:textColor="#252525"
+        android:id="@+id/clock_text"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/clock_clock"
+        android:layout_alignParentEnd="true"
+        android:padding="17dp"
+        android:textSize="25sp"
+        android:textColor="#FF9800"
+        android:id="@+id/clock_text_orange"/>
+
+
+    <RelativeLayout
+        android:layout_width="211.33dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/alignment_view">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/time">
+
+            <TextClock
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:format12Hour="hh.mm"
+                android:textSize="70sp"
+                android:layout_marginStart="-3dp"
+                android:id="@+id/min_hr"/>
+
+            <TextClock
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:format12Hour="ss"
+                android:textSize="25sp"
+                android:layout_marginStart="8dp"
+                android:id="@+id/sec"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/line_clock"
+            android:adjustViewBounds="true"
+            android:id="@+id/line"
+            android:layout_below="@+id/time"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/date_all"
+            android:layout_below="@+id/line"
+            android:layout_alignParentEnd="true">
+
+            <TextClock
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:format12Hour="MMM dd"
+                android:textSize="25sp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="-3dp"
+                android:layout_marginEnd="-1dp"
+                android:textAllCaps="true"
+                android:id="@+id/date"/>
+
+            <TextClock
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:format12Hour="yyyy"
+                android:layout_alignParentEnd="true"
+                android:textSize="25sp"
+                android:layout_marginEnd="-1dp"
+                android:layout_marginTop="-3dp"
+                android:textAllCaps="true"
+                android:layout_below="@+id/date"
+                android:id="@+id/year"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:alpha="0.7"
+        android:id="@+id/dark_view"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clock_clock"
+            android:textSize="40sp"
+            android:textColor="#FF9800"
+            android:id="@+id/clock_nav"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:paddingEnd="17dp"
+            android:paddingTop="13dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clock_alarm_white"
+            android:textSize="40sp"
+            android:textColor="#4d4d4d"
+            android:id="@+id/alarm_nav"
+            android:layout_below="@+id/clock_nav"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentEnd="true"
+            android:paddingEnd="17dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clock_alarm_orange"
+            android:textSize="40sp"
+            android:textColor="#E91E63"
+            android:id="@+id/alarm_nav_orange"
+            android:layout_below="@+id/clock_nav"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentEnd="true"
+            android:paddingEnd="17dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clock_settings_white"
+            android:textSize="40sp"
+            android:textColor="#4d4d4d"
+            android:id="@+id/settings_nav"
+            android:layout_below="@+id/alarm_nav"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentEnd="true"
+            android:paddingEnd="17dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clock_settings_orange"
+            android:textSize="40sp"
+            android:textColor="#4CAF50"
+            android:id="@+id/settings_nav_orange"
+            android:layout_below="@+id/alarm_nav"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentEnd="true"
+            android:paddingEnd="17dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clock_theme"
+            android:textSize="40sp"
+            android:textColor="#4d4d4d"
+            android:id="@+id/theme_nav"
+            android:layout_below="@+id/settings_nav"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentEnd="true"
+            android:paddingEnd="17dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clock_theme_orange"
+            android:textSize="40sp"
+            android:textColor="#9C27B0"
+            android:id="@+id/theme_nav_orange"
+            android:layout_below="@+id/settings_nav"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentEnd="true"
+            android:paddingEnd="17dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

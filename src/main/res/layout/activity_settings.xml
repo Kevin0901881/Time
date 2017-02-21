@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.timeapp.time.Settings"
+    android:id="@+id/background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/settings_text"
+        android:requiresFadingEdge="vertical"
+        android:fadingEdge="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ALARM"
+                android:textSize="20sp"
+                android:textColor="#3E8F41"
+                android:layout_marginStart="25dp"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/alarm_header"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2.5dp"
+                android:background="#3E8F41"
+                android:layout_below="@+id/alarm_header"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:adjustViewBounds="true"
+                android:id="@+id/alarm_header_line"/>
+
+            <!--ImageView
+                android:layout_width="121dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:layout_below="@+id/settings_text_clear"
+                android:src="@drawable/settings_line"
+                android:layout_marginStart="25dp"
+                android:alpha="0"
+                android:id="@+id/settings_line_clear"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/settings_text_clear"
+                android:layout_alignTop="@+id/settings_line_clear"
+                android:layout_alignBottom="@+id/settings_line_1"
+                android:id="@+id/view_1"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/settings_text_clear"
+                android:layout_alignTop="@+id/settings_line_clear"
+                android:layout_alignBottom="@+id/settings_line_1"
+                android:background="#252525"
+                android:id="@+id/view_1_dark"/-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/alarm_header_line"
+                android:text="Snooze length"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="25dp"
+                android:id="@+id/snooze_length_text"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/snooze_length_scroll"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:fadingEdge="horizontal"
+                android:scrollbars="none"
+                android:requiresFadingEdge="horizontal"
+                android:layout_below="@+id/snooze_length_text">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2 minutes"
+                        android:textSize="17sp"
+                        android:textColor="#FFFFFF"
+                        android:id="@+id/snooze_length_option_2"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5 minutes"
+                        android:layout_marginStart="25dp"
+                        android:textSize="17sp"
+                        android:textColor="#FFFFFF"
+                        android:id="@+id/snooze_length_option_5"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10 minutes"
+                        android:textSize="17sp"
+                        android:textColor="#4CAF50"
+                        android:layout_marginStart="25dp"
+                        android:id="@+id/snooze_length_option_10"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="15 minutes"
+                        android:textSize="17sp"
+                        android:textColor="#FFFFFF"
+                        android:layout_marginStart="25dp"
+                        android:id="@+id/snooze_length_option_15"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="30 minutes"
+                        android:textSize="17sp"
+                        android:textColor="#FFFFFF"
+                        android:layout_marginStart="25dp"
+                        android:id="@+id/snooze_length_option_30"/>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+
+            <!--View
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/settings_line_1"
+                android:layout_alignTop="@+id/settings_line_1"
+                android:layout_alignBottom="@+id/settings_line_2"
+                android:id="@+id/view_2"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/settings_line_1"
+                android:layout_alignTop="@+id/settings_line_1"
+                android:layout_alignBottom="@+id/settings_line_2"
+                android:background="#252525"
+                android:id="@+id/view_2_dark"/-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/settings_line_1"
+                android:text="Stop alarm after"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="25dp"
+                android:id="@+id/snooze_stop_after"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/snooze_stop_after_scroll"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:fadingEdge="horizontal"
+                android:scrollbars="none"
+                android:requiresFadingEdge="horizontal"
+                android:layout_below="@+id/snooze_stop_after">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2 minutes"
+                        android:textSize="17sp"
+                        android:textColor="#FFFFFF"
+                        android:id="@+id/snooze_stop_after_option_2"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5 minutes"
+                        android:layout_marginStart="25dp"
+                        android:textSize="17sp"
+                        android:textColor="#FFFFFF"
+                        android:id="@+id/snooze_stop_after_option_5"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10 minutes"
+                        android:textSize="17sp"
+                        android:textColor="#4CAF50"
+                        android:layout_marginStart="25dp"
+                        android:id="@+id/snooze_stop_after_option_10"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="15 minutes"
+                        android:textSize="17sp"
+                        android:textColor="#FFFFFF"
+                        android:layout_marginStart="25dp"
+                        android:id="@+id/snooze_stop_after_option_15"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="30 minutes"
+                        android:textSize="17sp"
+                        android:textColor="#FFFFFF"
+                        android:layout_marginStart="25dp"
+                        android:id="@+id/snooze_stop_after_option_30"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Never"
+                        android:textSize="17sp"
+                        android:textColor="#FFFFFF"
+                        android:layout_marginStart="25dp"
+                        android:id="@+id/snooze_stop_after_option_never"/>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/settings_line_2"
+                android:text="Snooze with volume buttons"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="25dp"
+                android:id="@+id/snooze_volume"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/snooze_volume_scroll"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:fadingEdge="horizontal"
+                android:scrollbars="none"
+                android:requiresFadingEdge="horizontal"
+                android:layout_below="@+id/snooze_volume">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"
+                        android:textSize="17sp"
+                        android:textColor="#FFFFFF"
+                        android:id="@+id/snooze_volume_option_yes"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No"
+                        android:layout_marginStart="25dp"
+                        android:textSize="17sp"
+                        android:textColor="#4CAF50"
+                        android:id="@+id/snooze_volume_option_no"/>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <ImageView
+                android:layout_width="121dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:layout_below="@+id/snooze_length_scroll"
+                android:src="@drawable/settings_line"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="25dp"
+                android:id="@+id/settings_line_1"/>
+
+            <ImageView
+                android:layout_width="121dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:layout_below="@+id/snooze_stop_after_scroll"
+                android:src="@drawable/settings_line"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="25dp"
+                android:id="@+id/settings_line_2"/>
+
+            <!--ImageView
+                android:layout_width="121dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:layout_below="@+id/snooze_volume_scroll"
+                android:src="@drawable/settings_line"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="25dp"
+                android:id="@+id/settings_line_3"/-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OTHER"
+                android:textSize="20sp"
+                android:textColor="#3E8F41"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@+id/snooze_volume_scroll"
+                android:id="@+id/other_header"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/other_header_line"
+                android:layout_alignBottom="@+id/settings_line_4"
+                android:id="@+id/about_view"
+                android:background="#000000"
+                android:alpha="0.1"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/other_header_line"
+                android:layout_alignBottom="@+id/settings_line_4"
+                android:id="@+id/about_view_2"
+                android:background="#000000"
+                android:alpha="0"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2.5dp"
+                android:background="#3E8F41"
+                android:layout_below="@+id/other_header"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:adjustViewBounds="true"
+                android:id="@+id/other_header_line"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/other_header_line"
+                android:text="About"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="25dp"
+                android:id="@+id/about"/>
+
+            <ImageView
+                android:layout_width="121dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:layout_below="@+id/about"
+                android:src="@drawable/settings_line"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="25dp"
+                android:id="@+id/settings_line_4"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_settings"
+        android:layout_alignParentEnd="true"
+        android:padding="17dp"
+        android:textSize="25sp"
+        android:textColor="#252525"
+        android:id="@+id/settings_text"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_settings"
+        android:layout_alignParentEnd="true"
+        android:padding="17dp"
+        android:textSize="25sp"
+        android:textColor="#4CAF50"
+        android:id="@+id/settings_text_green"/>
+
+</RelativeLayout>

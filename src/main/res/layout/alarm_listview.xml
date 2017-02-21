@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="35dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alarm Title"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:id="@+id/alarm_title"
+            android:singleLine="true"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.00"
+                android:textSize="60sp"
+                android:id="@+id/time"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ampm"
+                android:text="PM"
+                android:textColor="#FFFFFF"
+                android:layout_toEndOf="@+id/time"
+                android:textSize="18sp"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="6dp"/>
+
+        </RelativeLayout>
+        
+    </LinearLayout>
+    
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="40dp"
+        android:id="@+id/alarm">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tomorrow"
+            android:id="@+id/day"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:layout_alignParentEnd="true"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="50dp"
+            android:layout_alignParentEnd="true">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/no_vibrate"
+                android:adjustViewBounds="true"
+                android:src="@drawable/no_vibrate"/>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/vibrate"
+                android:adjustViewBounds="true"
+                android:src="@drawable/vibrate"/>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:id="@+id/no_repeat"
+                android:src="@drawable/no_repeat"
+                android:layout_marginStart="50dp"/>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:id="@+id/repeat"
+                android:src="@drawable/repeat"
+                android:layout_marginStart="50dp"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="102dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/short_line"
+        android:layout_below="@+id/alarm"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="40dp"/>
+
+</RelativeLayout>

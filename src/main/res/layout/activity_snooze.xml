@@ -1,0 +1,83 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.timeapp.time.Snooze"
+    android:id="@+id/background"
+    android:keepScreenOn="true">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/snooze_alarm"
+        android:layout_centerHorizontal="true"
+        android:textSize="25sp"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/alarm_text"
+        android:layout_above="@+id/time"
+        android:singleLine="true"
+        />
+
+    <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/time"
+        android:format12Hour="hh.mm"
+        android:textSize="85sp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/alignment_view"
+        android:layout_marginBottom="30dp"/>
+
+    <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ampm"
+        android:textSize="20sp"
+        android:format12Hour="aa"
+        android:layout_toEndOf="@+id/time"
+        android:layout_below="@+id/alarm_text"
+        android:layout_marginTop="14dp"
+        android:layout_marginStart="10dp"/>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/alignment_view"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/alignment_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:id="@+id/tutorial">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/snooze_stop_alarm"
+            android:alpha="0.5"
+            android:id="@+id/stop_alarm"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/snooze_double_tap_to_snooze"
+            android:layout_below="@+id/stop_alarm"
+            android:layout_centerHorizontal="true"
+            android:alpha="0.5"
+            android:layout_marginTop="30dp"
+            android:id="@+id/snooze"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/triple_dots_snooze"
+            android:layout_centerInParent="true"
+            android:alpha="0.5"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
