@@ -26,9 +26,6 @@ public class Theme extends AppCompatActivity {
     private TextView secDark;
     private TextView secLight;
 
-    /*private ImageView dark;
-    private ImageView light;*/
-
     private View viewDark;
     private View viewLight;
     private View backgroundDark;
@@ -79,9 +76,6 @@ public class Theme extends AppCompatActivity {
 
         backgroundDark = findViewById(R.id.background_dark);
         backgroundLight = findViewById(R.id.background_light);
-
-        /*dark = (ImageView) findViewById(R.id.dark);
-        light = (ImageView) findViewById(R.id.light);*/
 
         viewDark = findViewById(R.id.view_dark);
         viewDark.setVisibility(View.GONE);
