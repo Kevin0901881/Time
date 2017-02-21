@@ -13,13 +13,6 @@
         android:layout_weight="1"
         android:id="@+id/dark_rl">
 
-        <!--ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/theme_dark"
-            android:scaleType="centerCrop"
-            android:id="@+id/dark"/-->
-
         <View
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -73,13 +66,6 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:id="@+id/light_rl">
-
-        <!--ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/theme_light"
-            android:scaleType="centerCrop"
-            android:id="@+id/light"/-->
 
         <View
             android:layout_width="match_parent"
