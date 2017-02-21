@@ -143,7 +143,6 @@ public class Snooze extends AppCompatActivity implements GestureDetector.OnGestu
 
                            @Override
                            public void run() {
-                               // TODO Auto-generated method stub
                                runOnUiThread(new Runnable() {
                                    public void run() {
                                        end();
@@ -249,58 +248,7 @@ public class Snooze extends AppCompatActivity implements GestureDetector.OnGestu
 
     @Override
     public void onLongPress(MotionEvent event) {
-
         stop();
-
-        /*alarmText.startAnimation(fadeOut);
-        tutorial.startAnimation(fadeOut);
-        time.startAnimation(fadeOut);
-        ampm.startAnimation(fadeOut);
-
-
-        fadeOut.setAnimationListener(new Animation.AnimationListener() {
-            @Override
-            public void onAnimationStart(Animation animation) {
-
-            }
-
-            @Override
-            public void onAnimationEnd(Animation animation) {
-                alarmText.setVisibility(View.GONE);
-                tutorial.setVisibility(View.GONE);
-                time.setVisibility(View.GONE);
-                ampm.setVisibility(View.GONE);
-                snoozed.setVisibility(View.GONE);
-
-                stopped.setVisibility(View.VISIBLE);
-                stopped.startAnimation(fadeIn);
-
-                alarmText.startAnimation(aa);
-                aa.setAnimationListener(new Animation.AnimationListener() {
-                    @Override
-                    public void onAnimationStart(Animation animation) {
-
-                    }
-
-                    @Override
-                    public void onAnimationEnd(Animation animation) {
-                        finish();
-                    }
-
-                    @Override
-                    public void onAnimationRepeat(Animation animation) {
-
-                    }
-                });
-            }
-
-            @Override
-            public void onAnimationRepeat(Animation animation) {
-
-            }
-        });
-
-*/
     }
 
     @Override
@@ -320,57 +268,7 @@ public class Snooze extends AppCompatActivity implements GestureDetector.OnGestu
 
     @Override
     public boolean onDoubleTap(MotionEvent event) {
-
         snooze();
-
-        /*alarmText.startAnimation(fadeOut);
-        tutorial.startAnimation(fadeOut);
-        time.startAnimation(fadeOut);
-        ampm.startAnimation(fadeOut);
-
-        fadeOut.setAnimationListener(new Animation.AnimationListener() {
-            @Override
-            public void onAnimationStart(Animation animation) {
-
-            }
-
-            @Override
-            public void onAnimationEnd(Animation animation) {
-                alarmText.setVisibility(View.GONE);
-                tutorial.setVisibility(View.GONE);
-                time.setVisibility(View.GONE);
-                ampm.setVisibility(View.GONE);
-                stopped.setVisibility(View.GONE);
-
-                snoozed.setVisibility(View.VISIBLE);
-                snoozed.startAnimation(fadeIn);
-
-                alarmText.startAnimation(aa);
-                aa.setAnimationListener(new Animation.AnimationListener() {
-                    @Override
-                    public void onAnimationStart(Animation animation) {
-
-                    }
-
-                    @Override
-                    public void onAnimationEnd(Animation animation) {
-                        finish();
-                    }
-
-                    @Override
-                    public void onAnimationRepeat(Animation animation) {
-
-                    }
-                });
-            }
-
-            @Override
-            public void onAnimationRepeat(Animation animation) {
-
-            }
-        });*/
-
-
         return true;
     }
 
@@ -420,8 +318,7 @@ public class Snooze extends AppCompatActivity implements GestureDetector.OnGestu
         PendingIntent pi = PendingIntent.getBroadcast(Snooze.this, 0, i, PendingIntent.FLAG_UPDATE_CURRENT);
 
         //snooze for ten minutes, will add more options later
-
-
+            
         if (snoozeLength == 1){
             minutes = 2 * 60 * 1000;
         } else if (snoozeLength == 2){
