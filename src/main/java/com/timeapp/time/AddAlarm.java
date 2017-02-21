@@ -32,7 +32,6 @@ import java.util.Date;
 
 public class AddAlarm extends AppCompatActivity {
 
-    //private TextView addAlarmText;
     private TextView time;
     private TextView ampm;
     private TextView noVibrate;
@@ -153,8 +152,6 @@ public class AddAlarm extends AppCompatActivity {
         alarmTextPink.setTypeface(oswaldRegular);
         alarmTextPink.setVisibility(View.GONE);
 
-        /*addAlarmText = (TextView) findViewById(R.id.add_alarm_text);
-        addAlarmText.setTypeface(oswaldRegular);*/
         time = (TextView) findViewById(R.id.time);
         time.setTypeface(oswaldRegular);
         ampm = (TextView) findViewById(R.id.ampm);
@@ -503,33 +500,6 @@ public class AddAlarm extends AppCompatActivity {
         darkView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                /*if (checkerThree == 1) {
-                    timePickerLayout.animate()
-                            .translationY(30f)
-                            .alpha(0f)
-                            .setDuration(150)
-                            .setListener(new AnimatorListenerAdapter() {
-                                @Override
-                                public void onAnimationEnd(Animator animation) {
-                                    checker = 0;
-                                    timePickerLayout.setVisibility(View.GONE);
-                                }
-                            });
-
-                    darkView.animate()
-                            .alpha(0f)
-                            .setDuration(150)
-                            .setListener(new AnimatorListenerAdapter() {
-                                @Override
-                                public void onAnimationEnd(Animator animation) {
-                                    darkView.setVisibility(View.GONE);
-                                }
-                            });
-                } else if (checkerThree == 2) {
-                    onBackPressed();
-                }*/
-
                 onBackPressed();
             }
         });
