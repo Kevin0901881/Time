@@ -33,12 +33,6 @@ public class Alarm extends AppCompatActivity {
 
     private TextView alarmText;
     private TextView alarmTextPink;
-    /*private TextView alarmTitle;
-    private TextView time;
-    private TextView ampm;
-    private TextView day;
-    private TextView vibrate;
-    private TextView repeat;*/
     private TextView noMoreAlarms;
     private TextView clockNav;
     private TextView clockNavOrange;
@@ -48,7 +42,6 @@ public class Alarm extends AppCompatActivity {
     private TextView themeNav;
     private TextView themeNavOrange;
 
-    //private ImageView line;
     private ImageView addAlarm;
     private ImageView addAlarmPressed;
     private ImageView alarmCircle;
@@ -57,7 +50,6 @@ public class Alarm extends AppCompatActivity {
 
     private ListView lv;
 
-    //private RelativeLayout nextAlarm;
     private RelativeLayout alarms;
     private RelativeLayout background;
 
@@ -86,33 +78,17 @@ public class Alarm extends AppCompatActivity {
 
         bundle = new Bundle();
 
-        //load bundle from storage here
-
         Typeface oswaldLight = Typeface.createFromAsset(getAssets(), "fonts/oswaldLight.ttf");
         Typeface oswaldRegular = Typeface.createFromAsset(getAssets(), "fonts/oswaldRegular.ttf");
 
         background = (RelativeLayout) findViewById(R.id.background);
         background.setBackgroundColor(Color.parseColor("#373737"));
 
-        //nextAlarm = (RelativeLayout) findViewById(R.id.next_alarm);
-
         alarmText = (TextView) findViewById(R.id.alarm_text);
         alarmText.setTypeface(oswaldRegular);
         alarmTextPink = (TextView) findViewById(R.id.alarm_text_pink);
         alarmTextPink.setTypeface(oswaldRegular);
         alarmTextPink.setVisibility(View.GONE);
-        /*alarmTitle = (TextView) findViewById(R.id.alarm_title);
-        alarmTitle.setTypeface(oswaldLight);
-        time = (TextView) findViewById(R.id.time);
-        time.setTypeface(oswaldRegular);
-        ampm = (TextView) findViewById(R.id.ampm);
-        ampm.setTypeface(oswaldRegular);
-        day = (TextView) findViewById(R.id.day);
-        day.setTypeface(oswaldRegular);
-        vibrate = (TextView) findViewById(R.id.vibrate);
-        vibrate.setTypeface(oswaldRegular);
-        repeat = (TextView) findViewById(R.id.repeat);
-        repeat.setTypeface(oswaldRegular);*/
         noMoreAlarms = (TextView) findViewById(R.id.no_more_alarms);
         noMoreAlarms.setTypeface(oswaldLight);
         alarmNav = (TextView) findViewById(R.id.alarm_nav);
@@ -139,7 +115,6 @@ public class Alarm extends AppCompatActivity {
         darkView = findViewById(R.id.dark_view);
         darkView.setVisibility(View.GONE);
 
-        //line = (ImageView) findViewById(R.id.line);
         addAlarm = (ImageView) findViewById(R.id.add_alarm);
         addAlarm.setScaleX(0f);
         addAlarm.setScaleY(0f);
@@ -148,7 +123,6 @@ public class Alarm extends AppCompatActivity {
         alarmCircle = (ImageView) findViewById(R.id.alarm_circle);
         alarmCircle.setVisibility(View.GONE);
 
-        //nextAlarm = (RelativeLayout) findViewById(R.id.next_alarm);
         alarms = (RelativeLayout) findViewById(R.id.other_alarms);
 
         lv = (ListView) findViewById(R.id.alarms);
@@ -165,14 +139,6 @@ public class Alarm extends AppCompatActivity {
 
         Animation AlarmUp = AnimationUtils.loadAnimation(this, R.anim.time_up_animation);
         AlarmUp.setStartOffset(600);
-
-        /*line.setScaleX(0);
-
-        line.animate()
-                .scaleX(1)
-                .setDuration(500)
-                .setStartDelay(500)
-                .setInterpolator(new DecelerateInterpolator(2));*/
 
         addAlarm.animate()
                 .scaleX(1)
