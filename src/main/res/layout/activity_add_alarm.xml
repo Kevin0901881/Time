@@ -553,25 +553,7 @@
                 android:id="@+id/ok"/>
 
         </RelativeLayout>
-
-        <!--ImageView
-            android:layout_width="270.33dp"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:src="@drawable/add_alarm_ok_button"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/timePicker"
-            android:id="@+id/ok_button"/>
-
-        <ImageView
-            android:layout_width="270.33dp"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:src="@drawable/add_alarm_ok_button_pressed"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/timePicker"
-            android:id="@+id/ok_button_pressed"/-->
-
+        
     </RelativeLayout>
 
 </RelativeLayout>
