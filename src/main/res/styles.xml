@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme.
+        <item name="colorPrimary">#373737</item>
+        <item name="colorPrimaryDark">#252525</item> -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="color">#609F24</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+</resources>
