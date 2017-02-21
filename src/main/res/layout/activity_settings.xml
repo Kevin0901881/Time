@@ -38,33 +38,6 @@
                 android:adjustViewBounds="true"
                 android:id="@+id/alarm_header_line"/>
 
-            <!--ImageView
-                android:layout_width="121dp"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:layout_below="@+id/settings_text_clear"
-                android:src="@drawable/settings_line"
-                android:layout_marginStart="25dp"
-                android:alpha="0"
-                android:id="@+id/settings_line_clear"/>
-
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/settings_text_clear"
-                android:layout_alignTop="@+id/settings_line_clear"
-                android:layout_alignBottom="@+id/settings_line_1"
-                android:id="@+id/view_1"/>
-
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/settings_text_clear"
-                android:layout_alignTop="@+id/settings_line_clear"
-                android:layout_alignBottom="@+id/settings_line_1"
-                android:background="#252525"
-                android:id="@+id/view_1_dark"/-->
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -140,24 +113,6 @@
                 </LinearLayout>
 
             </HorizontalScrollView>
-
-
-            <!--View
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/settings_line_1"
-                android:layout_alignTop="@+id/settings_line_1"
-                android:layout_alignBottom="@+id/settings_line_2"
-                android:id="@+id/view_2"/>
-
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/settings_line_1"
-                android:layout_alignTop="@+id/settings_line_1"
-                android:layout_alignBottom="@+id/settings_line_2"
-                android:background="#252525"
-                android:id="@+id/view_2_dark"/-->
 
             <TextView
                 android:layout_width="wrap_content"
@@ -312,17 +267,6 @@
                 android:layout_marginBottom="20dp"
                 android:layout_marginStart="25dp"
                 android:id="@+id/settings_line_2"/>
-
-            <!--ImageView
-                android:layout_width="121dp"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:layout_below="@+id/snooze_volume_scroll"
-                android:src="@drawable/settings_line"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="20dp"
-                android:layout_marginStart="25dp"
-                android:id="@+id/settings_line_3"/-->
 
             <TextView
                 android:layout_width="wrap_content"
